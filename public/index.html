@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Site List</title>
+    <style>
+        div {
+            width: 100%;
+            height: 100%;
+        }
+        a {
+           display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Site List</h1>
+    <div id='sites'></div>
+    <script>
+        // below is a demo loop that creates and inserts links for the 2 game folders
+        window.onload = () => {
+            for (let i = 1; i <= 2; i++) {
+                const a = document.createElement('a');
+                a.href = `site-${i}/index.html`;
+                a.innerText = `site-${i}`;
+                document.querySelector('#sites').appendChild(a);
+            }
+        }
+    </script>
+</body>
+</html>
